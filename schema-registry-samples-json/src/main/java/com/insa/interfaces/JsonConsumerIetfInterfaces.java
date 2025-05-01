@@ -19,8 +19,8 @@ package com.insa.interfaces;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaDeserializer;
-import com.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaDeserializerConfig;
+import fr.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaDeserializer;
+import fr.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaDeserializerConfig;
 import io.confluent.kafka.serializers.subject.RecordNameStrategy;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -35,7 +35,7 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-import static com.insa.kafka.serializers.yang.cbor.AbstractKafkaYangCborSchemaSerializer.SCHEMA_ID_KEY;
+import static fr.insa.kafka.serializers.yang.json.AbstractKafkaYangJsonSchemaSerializer.SCHEMA_ID_KEY;
 
 public class JsonConsumerIetfInterfaces {
 

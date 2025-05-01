@@ -18,8 +18,8 @@ package com.insa.interfaces;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaSerializer;
-import com.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaSerializerConfig;
+import fr.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaSerializer;
+import fr.insa.kafka.serializers.yang.json.KafkaYangJsonSchemaSerializerConfig;
 import io.confluent.kafka.serializers.subject.RecordNameStrategy;
 import org.apache.commons.lang3.SerializationException;
 import org.apache.kafka.clients.producer.KafkaProducer;
