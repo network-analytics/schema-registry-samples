@@ -46,10 +46,11 @@
     </scm>
 
     <properties>
-        <java.version>11</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <yangkit.version>1.4.5</yangkit.version>
         <schema.registry.version>7.5.1</schema.registry.version>
+        <yang.registry.version>0.2</yang.registry.version>
         <kafka.client.version>3.6.0</kafka.client.version>
         <junit.version>5.9.1</junit.version>
         <jackson.databind.version>2.15.2</jackson.databind.version>
