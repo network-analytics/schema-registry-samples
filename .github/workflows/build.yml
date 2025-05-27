@@ -22,5 +22,34 @@ jobs:
 
     - name: Build and Install Yangkit (Skipping tests)
       run: mvn -B install --file yangkit/pom.xml -DskipTests
+
+    - name: Download yang-json-schema-serializer-0.0.3-shaded.jar from releases
+      run: |
+        # Download specific release JAR
+        wget https://github.com/network-analytics/yang-kafka-integration/releases/download/v0.0.3/kafka-yang-json-schema-serializer-0.0.3-shaded.jar
+        
+        # Install to local Maven repository
+        mvn install:install-file \
+          -Dfile=kafka-yang-json-schema-serializer-0.0.3-shaded.jar \
+          -DgroupId=ch.swisscom \
+          -DartifactId=kafka-yang-json-schema-serializer \
+          -Dversion=0.0.3 \
+          -Dpackaging=jar \
+          -DgeneratePom=true
+
+    - name: Download yang-cbor-schema-serializer-0.0.3-shaded.jar from releases
+      run: |
+        # Download specific release JAR
+        wget https://github.com/network-analytics/yang-kafka-integration/releases/download/v0.0.3/kafka-yang-cbor-schema-serializer-0.0.3-shaded.jar
+        
+        # Install to local Maven repository
+        mvn install:install-file \
+          -Dfile=kafka-yang-cbor-schema-serializer-0.0.3-shaded.jar \
+          -DgroupId=ch.swisscom \
+          -DartifactId=kafka-yang-cbor-schema-serializer \
+          -Dversion=0.0.3 \
+          -Dpackaging=jar \
+          -DgeneratePom=true
+
     - name: Build with Maven
       run: mvn -B package --file pom.xml
