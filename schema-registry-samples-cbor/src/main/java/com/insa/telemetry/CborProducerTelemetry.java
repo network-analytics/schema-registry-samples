@@ -18,8 +18,8 @@ package com.insa.telemetry;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.insa.kafka.serializers.yang.cbor.KafkaYangCborSchemaSerializer;
-import com.insa.kafka.serializers.yang.cbor.KafkaYangCborSchemaSerializerConfig;
+import ch.swisscom.kafka.serializers.yang.cbor.KafkaYangCborSchemaSerializer;
+import ch.swisscom.kafka.serializers.yang.cbor.KafkaYangCborSchemaSerializerConfig;
 import io.confluent.kafka.serializers.subject.RecordNameStrategy;
 import org.apache.commons.lang3.SerializationException;
 import org.apache.kafka.clients.producer.KafkaProducer;

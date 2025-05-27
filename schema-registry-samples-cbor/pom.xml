@@ -84,9 +84,9 @@
             <version>${antlr4.runtime.version}</version>
         </dependency>
         <dependency>
-            <groupId>io.confluent</groupId>
+            <groupId>ch.swisscom</groupId>
             <artifactId>kafka-yang-cbor-schema-serializer</artifactId>
-            <version>${schema.registry.version}</version>
+            <version>${yang.registry.version}</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
