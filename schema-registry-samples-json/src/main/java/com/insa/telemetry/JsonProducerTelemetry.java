@@ -60,7 +60,7 @@ public class JsonProducerTelemetry {
         KafkaProducer<String, YangDataDocument> producer = new KafkaProducer<>(producerConfig);
 
         // Parsing YANGs
-        YangSchemaContext schemaContext = YangYinParser.parse(JsonProducerTelemetry.class.getClassLoader().getResource("telemetry/yangs").getFile());
+        YangSchemaContext schemaContext = YangYinParser.parse(JsonProducerTelemetry.class.getClassLoader().getResource("telemetry/my-yangs").getFile());
         ValidatorResult result = schemaContext.validate();
         System.out.println("Schema context is valid : " + result.isOk() + "; " + schemaContext.getModules().size());
         for (ValidatorRecord<?, ?> record : result.getRecords()) {
@@ -70,7 +70,7 @@ public class JsonProducerTelemetry {
         }
 
         // Parsing JSON
-        JsonNode jsonNode = new ObjectMapper().readTree(new File(JsonProducerTelemetry.class.getClassLoader().getResource("telemetry/telemetry-msg.json").getFile()));
+        JsonNode jsonNode = new ObjectMapper().readTree(new File(JsonProducerTelemetry.class.getClassLoader().getResource("telemetry/my-cpu-data.json").getFile()));
         ValidatorResultBuilder validatorResultBuilder = new ValidatorResultBuilder();
         YangDataDocument doc = new YangDataDocumentJsonParser(schemaContext).parse(jsonNode, validatorResultBuilder);
         doc.update();

@@ -1,0 +1,15 @@
+module cpu {
+    namespace "urn:my-namespace";
+    prefix cpu;
+
+    typedef uuid {
+        type string {
+          pattern '[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-'
+                + '[0-9a-fA-F]{4}-[0-9a-fA-F]{12}';
+        }
+    }
+
+    leaf name {
+      type string;
+    }
+}
